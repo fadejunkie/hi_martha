@@ -26,19 +26,44 @@
         <button class="btn-primary px-6 py-2 rounded text-black font-bold uppercase text-xs">Book Now</button>
     </nav>
 
-    <section class="relative h-[80vh] flex items-center justify-center text-center px-4 overflow-hidden">
-        <div class="absolute inset-0 bg-black/60 z-10"></div>
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
-        
-        <div class="relative z-20 max-w-3xl">
-            <h1 class="text-6xl md:text-8xl font-bold mb-4 italic">STACKING DIMES.</h1>
-            <p class="text-xl md:text-2xl font-light mb-8 text-gray-300">Premium Welding Gear & Hands-on Fabrication Classes.</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#shop" class="btn-primary px-10 py-4 rounded text-black font-bold text-lg">Shop the Drop</a>
-                <a href="#classes" class="border border-white/30 hover:bg-white/10 px-10 py-4 rounded font-bold text-lg">Browse Classes</a>
-            </div>
+  <section class="relative h-[85vh] flex items-center justify-center text-center px-4 overflow-hidden">
+    
+    <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        poster="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80"
+        class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="http://googleusercontent.com/generated_video_content/11842524123238136500" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-[#121212] z-10"></div>
+    
+    <div class="relative z-20 max-w-3xl">
+        <h1 class="text-6xl md:text-9xl font-bold mb-4 italic tracking-tighter drop-shadow-2xl">
+            STACKING <span class="text-[#FF5F1F]">DIMES.</span>
+        </h1>
+        <p class="text-xl md:text-2xl font-light mb-10 text-gray-200 tracking-wide uppercase">
+            Premium Welding Gear & Hands-on Fabrication Classes.
+        </p>
+        <div class="flex flex-col md:flex-row gap-5 justify-center">
+            <a href="#shop" class="btn-primary px-12 py-5 rounded text-black font-bold text-lg shadow-[0_0_20px_rgba(255,95,31,0.4)]">
+                Shop the Drop
+            </a>
+            <a href="#classes" class="backdrop-blur-sm border border-white/20 hover:bg-white/10 px-12 py-5 rounded font-bold text-lg transition-all">
+                Browse Classes
+            </a>
         </div>
-    </section>
+    </div>
+
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce text-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+    </div>
+</section>
 
     <section id="shop" class="py-20 px-6 max-w-7xl mx-auto">
         <h2 class="text-4xl mb-12 accent-border pl-4">The Workshop Gear</h2>
