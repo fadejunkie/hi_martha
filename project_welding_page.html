@@ -7,120 +7,128 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #121212; color: #eeeeee; }
+        body { font-family: 'Inter', sans-serif; background-color: #121212; color: #eeeeee; overflow-x: hidden; }
         h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
         .accent-border { border-left: 4px solid #FF5F1F; }
         .btn-primary { background-color: #FF5F1F; transition: 0.3s; }
-        .btn-primary:hover { background-color: #e54e10; transform: translateY(-2px); }
+        .btn-primary:hover { background-color: #e54e10; transform: translateY(-2px); box-shadow: 0 0 20px rgba(255, 95, 31, 0.5); }
+        /* Smooth fade for the video overlay */
+        .video-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, #121212 100%);
+        }
     </style>
 </head>
 <body>
 
-    <nav class="p-6 flex justify-between items-center border-b border-white/10 sticky top-0 bg-[#121212]/90 backdrop-blur-md z-50">
-        <div class="text-2xl font-bold tracking-tighter">ANTHONY<span class="text-[#FF5F1F]">.</span></div>
-        <div class="space-x-8 hidden md:block uppercase text-sm font-bold">
-            <a href="#shop" class="hover:text-[#FF5F1F]">Merch</a>
-            <a href="#classes" class="hover:text-[#FF5F1F]">Classes</a>
-            <a href="#about" class="hover:text-[#FF5F1F]">About</a>
+    <nav class="p-6 flex justify-between items-center border-b border-white/10 sticky top-0 bg-[#121212]/95 backdrop-blur-md z-50">
+        <div class="text-2xl font-bold tracking-tighter uppercase">ANTHONY<span class="text-[#FF5F1F]">.</span></div>
+        <div class="space-x-8 hidden md:flex uppercase text-sm font-bold tracking-widest">
+            <a href="#shop" class="hover:text-[#FF5F1F] transition">Merch</a>
+            <a href="#classes" class="hover:text-[#FF5F1F] transition">Classes</a>
+            <a href="#about" class="hover:text-[#FF5F1F] transition">About</a>
         </div>
-        <button class="btn-primary px-6 py-2 rounded text-black font-bold uppercase text-xs">Book Now</button>
+        <button class="btn-primary px-6 py-2 rounded text-black font-bold uppercase text-xs tracking-widest">Book A Seat</button>
     </nav>
 
-  <section class="relative h-[85vh] flex items-center justify-center text-center px-4 overflow-hidden">
-    
-    <video 
-        autoplay 
-        muted 
-        loop 
-        playsinline 
-        poster="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80"
-        class="absolute inset-0 w-full h-full object-cover z-0">
-        <source src="http://googleusercontent.com/generated_video_content/11842524123238136500" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <section class="relative h-[90vh] flex items-center justify-center text-center px-4 overflow-hidden">
+        
+        <video 
+            id="heroVideo"
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            preload="auto"
+            poster="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80"
+            class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="http://googleusercontent.com/generated_video_content/11842524123238136500" type="video/mp4">
+        </video>
 
-    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-[#121212] z-10"></div>
-    
-    <div class="relative z-20 max-w-3xl">
-        <h1 class="text-6xl md:text-9xl font-bold mb-4 italic tracking-tighter drop-shadow-2xl">
-            STACKING <span class="text-[#FF5F1F]">DIMES.</span>
-        </h1>
-        <p class="text-xl md:text-2xl font-light mb-10 text-gray-200 tracking-wide uppercase">
-            Premium Welding Gear & Hands-on Fabrication Classes.
-        </p>
-        <div class="flex flex-col md:flex-row gap-5 justify-center">
-            <a href="#shop" class="btn-primary px-12 py-5 rounded text-black font-bold text-lg shadow-[0_0_20px_rgba(255,95,31,0.4)]">
-                Shop the Drop
-            </a>
-            <a href="#classes" class="backdrop-blur-sm border border-white/20 hover:bg-white/10 px-12 py-5 rounded font-bold text-lg transition-all">
-                Browse Classes
-            </a>
+        <div class="absolute inset-0 video-overlay z-10"></div>
+        
+        <div class="relative z-20 max-w-4xl">
+            <h1 class="text-7xl md:text-9xl font-bold mb-4 italic tracking-tighter drop-shadow-2xl">
+                STACKING <span class="text-[#FF5F1F]">DIMES.</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light mb-10 text-gray-200 uppercase tracking-[0.2em]">
+                Premium Welding Gear & Workshops
+            </p>
+            <div class="flex flex-col md:flex-row gap-5 justify-center">
+                <a href="#shop" class="btn-primary px-12 py-5 rounded text-black font-bold text-lg uppercase tracking-wider">
+                    Shop Gear
+                </a>
+                <a href="#classes" class="backdrop-blur-md border border-white/20 hover:bg-white/10 px-12 py-5 rounded font-bold text-lg uppercase tracking-wider transition-all">
+                    Book a Class
+                </a>
+            </div>
         </div>
-    </div>
 
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce text-gray-400">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-    </div>
-</section>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce text-[#FF5F1F]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </section>
 
-    <section id="shop" class="py-20 px-6 max-w-7xl mx-auto">
-        <h2 class="text-4xl mb-12 accent-border pl-4">The Workshop Gear</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="group">
-                <div class="bg-[#1A1A1A] h-96 mb-4 overflow-hidden flex items-center justify-center border border-white/5">
-                    <span class="text-gray-600">Product Image</span>
+    <section id="shop" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-5xl mb-16 accent-border pl-6">The Shop Drop</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="group cursor-pointer">
+                <div class="bg-[#1A1A1A] h-[450px] mb-6 overflow-hidden flex items-center justify-center border border-white/5 group-hover:border-[#FF5F1F]/50 transition-all">
+                    <p class="text-gray-600 uppercase font-bold tracking-widest">Weld-Ready Tee</p>
                 </div>
-                <h3 class="text-xl">The "Heavy Hitter" Tee</h3>
-                <p class="text-[#FF5F1F] font-bold">$32.00</p>
+                <h3 class="text-2xl mb-1 italic">"Heavy Metal" Tee</h3>
+                <p class="text-[#FF5F1F] font-bold text-xl">$35.00</p>
             </div>
-            <div class="group">
-                <div class="bg-[#1A1A1A] h-96 mb-4 overflow-hidden flex items-center justify-center border border-white/5">
-                    <span class="text-gray-600">Product Image</span>
+            <div class="group cursor-pointer">
+                <div class="bg-[#1A1A1A] h-[450px] mb-6 overflow-hidden flex items-center justify-center border border-white/5 group-hover:border-[#FF5F1F]/50 transition-all">
+                    <p class="text-gray-600 uppercase font-bold tracking-widest">Custom Hood</p>
                 </div>
-                <h3 class="text-xl">Signature Welding Cap</h3>
-                <p class="text-[#FF5F1F] font-bold">$28.00</p>
+                <h3 class="text-2xl mb-1 italic">The Anthony Signature Hood</h3>
+                <p class="text-[#FF5F1F] font-bold text-xl">$185.00</p>
             </div>
-            <div class="group">
-                <div class="bg-[#1A1A1A] h-96 mb-4 overflow-hidden flex items-center justify-center border border-white/5">
-                    <span class="text-gray-600">Product Image</span>
+            <div class="group cursor-pointer">
+                <div class="bg-[#1A1A1A] h-[450px] mb-6 overflow-hidden flex items-center justify-center border border-white/5 group-hover:border-[#FF5F1F]/50 transition-all">
+                    <p class="text-gray-600 uppercase font-bold tracking-widest">Shop Cap</p>
                 </div>
-                <h3 class="text-xl">Weld Mesh Snapback</h3>
-                <p class="text-[#FF5F1F] font-bold">$35.00</p>
+                <h3 class="text-2xl mb-1 italic">Spark-Resistant Snapback</h3>
+                <p class="text-[#FF5F1F] font-bold text-xl">$28.00</p>
             </div>
         </div>
     </section>
 
-    <section id="classes" class="py-20 bg-[#0A0A0A] px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
-            <div class="md:w-1/2">
-                <h2 class="text-4xl mb-6 accent-border pl-4">Get Under the Mask</h2>
-                <p class="text-gray-400 mb-8 leading-relaxed">Stop watching YouTube and start pulling triggers. Our in-person workshops are designed for absolute beginners and seasoned fabricators looking to sharpen their skills.</p>
-                
-                <div class="space-y-6">
-                    <div class="p-6 bg-[#121212] border border-white/10 rounded-lg">
-                        <h4 class="text-[#FF5F1F] font-bold">MIG Basics 101</h4>
-                        <p class="text-sm text-gray-500">Every Saturday | 4 Hours | $150</p>
-                    </div>
-                    <div class="p-6 bg-[#121212] border border-white/10 rounded-lg">
-                        <h4 class="text-[#FF5F1F] font-bold">TIG Precision & Art</h4>
-                        <p class="text-sm text-gray-500">Sunday Evenings | 3 Hours | $225</p>
-                    </div>
-                </div>
-            </div>
-            <div class="md:w-1/2 bg-[url('https://images.unsplash.com/photo-1534774592507-488885376ad3?auto=format&fit=crop&q=80')] bg-cover bg-center rounded-2xl min-h-[400px]"></div>
-        </div>
-    </section>
-
-    <footer class="py-12 border-t border-white/10 text-center text-gray-500 text-sm">
-        <p>&copy; 2026 ANTHONY FABRICATION. All rights reserved.</p>
-        <div class="mt-4 flex justify-center space-x-6 uppercase font-bold tracking-widest text-xs">
-            <a href="#" class="hover:text-white">Instagram</a>
-            <a href="#" class="hover:text-white">YouTube</a>
-            <a href="#" class="hover:text-white">Email</a>
+    <footer class="py-20 border-t border-white/10 text-center bg-black">
+        <div class="text-3xl font-bold mb-6 tracking-tighter">ANTHONY<span class="text-[#FF5F1F]">.</span></div>
+        <p class="text-gray-500 max-w-md mx-auto mb-8 px-4 font-light">Join the crew. We send out updates on new merch drops and class schedules twice a month.</p>
+        <div class="flex justify-center space-x-8 uppercase font-bold tracking-[0.3em] text-[10px] text-gray-400">
+            <a href="#" class="hover:text-[#FF5F1F] transition">Instagram</a>
+            <a href="#" class="hover:text-[#FF5F1F] transition">YouTube</a>
+            <a href="#" class="hover:text-[#FF5F1F] transition">Email</a>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('heroVideo');
+            
+            // Attempt to play on load
+            var playPromise = video.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    // Autoplay started!
+                }).catch(error => {
+                    // Autoplay was prevented. Show a "Click to Unmute" or just wait for interaction.
+                    console.log("Browser blocked autoplay. Waiting for user interaction.");
+                    
+                    // Fallback: Play video as soon as the user clicks anywhere on the page
+                    document.body.addEventListener('click', function() {
+                        video.play();
+                    }, { once: true });
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
