@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP | ANTHONY FABRICATION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #121212; color: #eeeeee; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        .product-card:hover img { transform: scale(1.05); }
+        .filter-link:hover { color: #FF5F1F; padding-left: 8px; }
+        .filter-link { transition: all 0.3s ease; }
+    </style>
+</head>
+<body>
+
+    <nav class="p-6 flex justify-between items-center border-b border-white/10 bg-[#121212] sticky top-0 z-50">
+        <a href="index.html" class="text-xl font-bold tracking-tighter uppercase">ANTHONY<span class="text-[#FF5F1F]">.</span></a>
+        <div class="flex items-center space-x-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Cart (0)</span>
+            <button class="bg-white text-black px-4 py-2 rounded text-xs font-bold uppercase tracking-widest hover:bg-[#FF5F1F] transition">Checkout</button>
+        </div>
+    </nav>
+
+    <header class="py-16 px-6 text-center border-b border-white/5 bg-[#0D0D0D]">
+        <h1 class="text-5xl md:text-7xl font-bold mb-2">THE GEAR DROP</h1>
+        <p class="text-gray-500 uppercase tracking-[0.3em] text-sm font-light">Forged for the Shop. Built for the Grind.</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-12">
+        
+        <aside class="w-full md:w-64 space-y-10">
+            <div>
+                <h3 class="text-lg font-bold mb-4 border-b border-[#FF5F1F] pb-2 w-fit">Categories</h3>
+                <ul class="space-y-3 text-sm text-gray-400 font-bold uppercase tracking-widest">
+                    <li><a href="#" class="filter-link block text-[#FF5F1F]">View All</a></li>
+                    <li><a href="#" class="filter-link block">Workwear</a></li>
+                    <li><a href="#" class="filter-link block">Headwear</a></li>
+                    <li><a href="#" class="filter-link block">Accessories</a></li>
+                    <li><a href="#" class="filter-link block">Digital Blueprints</a></li>
+                </ul>
+            </div>
+
+            <div class="p-6 bg-[#1A1A1A] rounded-lg border border-white/5">
+                <h4 class="text-[#FF5F1F] font-bold text-xs uppercase mb-2">Shipping Note</h4>
+                <p class="text-[10px] text-gray-500 leading-relaxed uppercase tracking-tighter">Due to high demand on custom hoods, please allow 2-3 weeks for fabrication and delivery.</p>
+            </div>
+        </aside>
+
+        <section class="flex-1">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+                
+                <div class="product-card group cursor-pointer">
+                    <div class="relative overflow-hidden bg-[#1A1A1A] aspect-[4/5] flex items-center justify-center border border-white/5">
+                        <span class="text-gray-700 font-bold text-xs uppercase tracking-[0.5em]">Heavy Metal Tee</span>
+                        <div class="absolute bottom-0 left-0 right-0 bg-[#FF5F1F] text-black text-center py-2 translate-y-full group-hover:translate-y-0 transition-transform font-bold text-xs uppercase">Quick Add</div>
+                    </div>
+                    <div class="mt-4 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg tracking-tight">"Stacking Dimes" Heavyweight Tee</h3>
+                            <p class="text-gray-500 text-xs">Carbon Black / Safety Orange</p>
+                        </div>
+                        <span class="font-bold text-[#FF5F1F]">$38</span>
+                    </div>
+                </div>
+
+                <div class="product-card group cursor-pointer">
+                    <div class="relative overflow-hidden bg-[#1A1A1A] aspect-[4/5] flex items-center justify-center border border-white/5">
+                        <span class="text-gray-700 font-bold text-xs uppercase tracking-[0.5em]">Workshop Cap</span>
+                        <div class="absolute bottom-0 left-0 right-0 bg-[#FF5F1F] text-black text-center py-2 translate-y-full group-hover:translate-y-0 transition-transform font-bold text-xs uppercase">Quick Add</div>
+                    </div>
+                    <div class="mt-4 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg tracking-tight">Spark-Shield Trucker Hat</h3>
+                            <p class="text-gray-500 text-xs">Brushed Steel / Black</p>
+                        </div>
+                        <span class="font-bold text-[#FF5F1F]">$32</span>
+                    </div>
+                </div>
+
+                <div class="product-card group cursor-pointer">
+                    <div class="relative overflow-hidden bg-[#1A1A1A] aspect-[4/5] flex items-center justify-center border border-white/5 text-center px-4">
+                        <span class="text-gray-700 font-bold text-xs uppercase tracking-[0.5em]">Anthony Hood</span>
+                        <div class="absolute top-4 right-4 bg-white text-black px-2 py-1 text-[10px] font-bold">LIMITED DROP</div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-[#FF5F1F] text-black text-center py-2 translate-y-full group-hover:translate-y-0 transition-transform font-bold text-xs uppercase">Quick Add</div>
+                    </div>
+                    <div class="mt-4 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg tracking-tight">The "OG" Carbon Welding Hood</h3>
+                            <p class="text-gray-500 text-xs">Hand-Painted / Limited Edition</p>
+                        </div>
+                        <span class="font-bold text-[#FF5F1F]">$245</span>
+                    </div>
+                </div>
+
+                <div class="product-card group cursor-pointer">
+                    <div class="relative overflow-hidden bg-[#1A1A1A] aspect-[4/5] flex items-center justify-center border border-white/5">
+                        <span class="text-gray-700 font-bold text-xs uppercase tracking-[0.5em]">Canvas Apron</span>
+                    </div>
+                    <div class="mt-4 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg tracking-tight">Flame-Resistant Shop Apron</h3>
+                            <p class="text-gray-500 text-xs">12oz Duck Canvas</p>
+                        </div>
+                        <span class="font-bold text-[#FF5F1F]">$75</span>
+                    </div>
+                </div>
+
+                <div class="product-card group cursor-pointer">
+                    <div class="relative overflow-hidden bg-[#1A1A1A] aspect-[4/5] flex items-center justify-center border border-white/5">
+                        <span class="text-gray-700 font-bold text-xs uppercase tracking-[0.5em]">Magnet Pack</span>
+                    </div>
+                    <div class="mt-4 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg tracking-tight">Precision Weld Square Set</h3>
+                            <p class="text-gray-500 text-xs">Magnetic Jig Aids</p>
+                        </div>
+                        <span class="font-bold text-[#FF5F1F]">$45</span>
+                    </div>
+                </div>
+
+                <div class="product-card group cursor-pointer">
+                    <div class="relative overflow-hidden bg-[#1A1A1A] aspect-[4/5] flex items-center justify-center border border-white/5">
+                        <span class="text-gray-700 font-bold text-xs uppercase tracking-[0.5em]">Sticker Set</span>
+                    </div>
+                    <div class="mt-4 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg tracking-tight">"Bead Porn" Vinyl Sticker Pack</h3>
+                            <p class="text-gray-500 text-xs">Weatherproof Vinyl</p>
+                        </div>
+                        <span class="font-bold text-[#FF5F1F]">$15</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 text-center mt-20 opacity-50">
+        <p class="text-[10px] uppercase tracking-[0.4em] font-bold">ANTHONY FABRICATION &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
