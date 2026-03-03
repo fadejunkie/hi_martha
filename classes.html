@@ -3,136 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLASSES | ANTHONY FABRICATION</title>
+    <title>CLASSES | ANTHONY</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #121212; color: #eeeeee; }
-        h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
-        .class-card { transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.05); }
-        .class-card:hover { border-color: #FF5F1F; transform: translateY(-5px); background-color: #1A1A1A; }
-        .skill-tag { font-size: 10px; padding: 2px 8px; border-radius: 2px; font-weight: bold; letter-spacing: 1px; }
-        .beginner { background-color: #22C55E; color: white; }
-        .advanced { background-color: #EF4444; color: white; }
-    </style>
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
 </head>
-<body>
+<body class="bg-white text-zinc-900 dark:bg-[#121212] dark:text-[#eeeeee]">
 
-    <nav class="p-6 flex justify-between items-center border-b border-white/10 bg-[#121212] sticky top-0 z-50">
-        <a href="index.html" class="text-xl font-bold tracking-tighter uppercase">ANTHONY<span class="text-[#FF5F1F]">.</span></a>
-        <div class="hidden md:flex space-x-8 uppercase text-xs font-bold tracking-widest text-gray-400">
-            <a href="index.html" class="hover:text-white transition">Home</a>
-            <a href="shop.html" class="hover:text-white transition">Merch</a>
-            <a href="#" class="text-[#FF5F1F]">Classes</a>
-        </div>
-        <button class="border border-white/20 px-4 py-2 rounded text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">Login</button>
+    <nav class="p-6 flex justify-between items-center border-b border-zinc-200 dark:border-white/10">
+        <a href="index.html" class="text-xl font-bold tracking-tighter">ANTHONY<span class="text-[#FF5F1F]">.</span></a>
+        <a href="index.html" class="text-xs font-bold uppercase tracking-widest hover:text-[#FF5F1F]">← Back Home</a>
     </nav>
 
-    <header class="relative py-24 px-6 text-center bg-[#0D0D0D] overflow-hidden">
-        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1534774592507-488885376ad3?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
-        <div class="relative z-10">
-            <h1 class="text-6xl md:text-8xl font-bold mb-4">LEARN THE CRAFT</h1>
-            <p class="text-[#FF5F1F] uppercase tracking-[0.4em] text-sm font-bold">Hands-On Workshops in San Antonio, TX</p>
-        </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-6 py-16">
+    <main class="max-w-7xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-bold mb-12 italic border-l-4 border-[#FF5F1F] pl-6 uppercase">Workshops</h2>
         
-        <div class="flex flex-wrap justify-between items-end mb-12 gap-6">
-            <div>
-                <h2 class="text-3xl font-bold italic">Available Workshops</h2>
-                <p class="text-gray-500 text-sm">All tools and safety gear (PPE) are provided.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 rounded-xl bg-zinc-50 dark:bg-[#1A1A1A] border border-zinc-200 dark:border-white/5">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="bg-green-500 text-white text-[10px] px-2 py-1 font-bold rounded">BEGINNER</span>
+                    <span class="text-2xl font-bold">$150</span>
+                </div>
+                <h3 class="text-3xl mb-4 italic">MIG Fundamentals</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-8">4-hour intensive focusing on safety, machine setup, and pulling your first beads.</p>
+                <button class="w-full bg-[#FF5F1F] text-black font-bold py-4 rounded uppercase tracking-widest hover:brightness-110">Reserve My Spot</button>
             </div>
-            <div class="flex gap-4">
-                <button class="text-xs font-bold uppercase border-b-2 border-[#FF5F1F] pb-1">All Levels</button>
-                <button class="text-xs font-bold uppercase text-gray-500 hover:text-white transition pb-1">Intro</button>
-                <button class="text-xs font-bold uppercase text-gray-500 hover:text-white transition pb-1">Expert</button>
+
+            <div class="p-8 rounded-xl bg-zinc-50 dark:bg-[#1A1A1A] border border-zinc-200 dark:border-white/5">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="bg-red-500 text-white text-[10px] px-2 py-1 font-bold rounded">ADVANCED</span>
+                    <span class="text-2xl font-bold">$325</span>
+                </div>
+                <h3 class="text-3xl mb-4 italic">TIG Precision</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-8">Advanced heat control for aluminum and stainless steel fabrication.</p>
+                <button class="w-full bg-[#FF5F1F] text-black font-bold py-4 rounded uppercase tracking-widest hover:brightness-110">Reserve My Spot</button>
             </div>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-            
-            <div class="class-card p-8 rounded-lg flex flex-col justify-between h-full">
-                <div>
-                    <span class="skill-tag beginner mb-4 inline-block">BEGINNER FRIENDLY</span>
-                    <h3 class="text-2xl mb-2">MIG Fundamentals</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Master the basics of Metal Inert Gas welding. Ideal for DIYers, artists, and those looking to start a new career.</p>
-                    <ul class="text-xs space-y-2 text-gray-500 mb-8 font-bold uppercase tracking-tighter">
-                        <li class="flex items-center"><span class="text-[#FF5F1F] mr-2">/</span> 4 Hours Intensive</li>
-                        <li class="flex items-center"><span class="text-[#FF5F1F] mr-2">/</span> Max 6 Students</li>
-                        <li class="flex items-center"><span class="text-[#FF5F1F] mr-2">/</span> Take-home project included</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="flex justify-between items-center mb-6">
-                        <span class="text-2xl font-bold">$150.00</span>
-                        <span class="text-xs text-gray-500 uppercase">Next: Mar 14th</span>
-                    </div>
-                    <button class="w-full bg-[#FF5F1F] text-black font-bold py-3 rounded uppercase text-sm tracking-widest hover:scale-[1.02] transition">Book Workshop</button>
-                </div>
-            </div>
-
-            <div class="class-card p-8 rounded-lg flex flex-col justify-between h-full">
-                <div>
-                    <span class="skill-tag advanced mb-4 inline-block">EXPERIENCED ONLY</span>
-                    <h3 class="text-2xl mb-2">Precision TIG (Aluminum)</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Fine-tune your heat control and puddle management. Focus on thin-gauge aluminum and "walking the cup" techniques.</p>
-                    <ul class="text-xs space-y-2 text-gray-500 mb-8 font-bold uppercase tracking-tighter">
-                        <li class="flex items-center"><span class="text-[#FF5F1F] mr-2">/</span> 6 Hours Intensive</li>
-                        <li class="flex items-center"><span class="text-[#FF5F1F] mr-2">/</span> Max 3 Students</li>
-                        <li class="flex items-center"><span class="text-[#FF5F1F] mr-2">/</span> Specialized Gas setups</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="flex justify-between items-center mb-6">
-                        <span class="text-2xl font-bold">$325.00</span>
-                        <span class="text-xs text-gray-500 uppercase">Next: Mar 21st</span>
-                    </div>
-                    <button class="w-full bg-[#FF5F1F] text-black font-bold py-3 rounded uppercase text-sm tracking-widest hover:scale-[1.02] transition">Book Workshop</button>
-                </div>
-            </div>
-
-            <div class="class-card p-8 rounded-lg flex flex-col justify-between h-full border-dashed border-white/20">
-                <div>
-                    <span class="skill-tag bg-blue-600 text-white mb-4 inline-block">1-ON-1</span>
-                    <h3 class="text-2xl mb-2">Private Fabrication</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Work directly with Anthony on your specific project. From custom motorcycle frames to structural repair.</p>
-                    <ul class="text-xs space-y-2 text-gray-500 mb-8 font-bold uppercase tracking-tighter">
-                        <li class="flex items-center"><span class="text-[#FF5F1F] mr-2">/</span> Flexible Hours</li>
-                        <li class="flex items-center"><span class="text-[#FF5F1F] mr-2">/</span> Custom Curriculum</li>
-                        <li class="flex items-center"><span class="text-[#FF5F1F] mr-2">/</span> Professional Certification</li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="flex justify-between items-center mb-6">
-                        <span class="text-2xl font-bold">CONTACT</span>
-                        <span class="text-xs text-gray-500 uppercase">Custom Dates</span>
-                    </div>
-                    <button class="w-full border border-[#FF5F1F] text-[#FF5F1F] font-bold py-3 rounded uppercase text-sm tracking-widest hover:bg-[#FF5F1F] hover:text-black transition">Inquire Now</button>
-                </div>
-            </div>
-
-        </div>
-
-        <section class="bg-[#1A1A1A] p-12 rounded-2xl flex flex-col md:flex-row items-center gap-12 border border-white/5">
-            <div class="md:w-2/3">
-                <h2 class="text-4xl font-bold mb-4 italic">The Monthly "Shop Talk"</h2>
-                <p class="text-gray-400 mb-6 leading-relaxed">Every first Friday of the month, we open the bay doors for local fabricators. No cost, no ego. Bring your current project photos, swap tips, and meet the community. First round of coffee is on the shop.</p>
-                <div class="flex items-center gap-4 text-[#FF5F1F] font-bold uppercase tracking-widest text-sm">
-                    <span>📍 Main Street Shop</span>
-                    <span>🕒 6:00 PM - 9:00 PM</span>
-                </div>
-            </div>
-            <div class="md:w-1/3 w-full">
-                <button class="w-full bg-white text-black font-bold py-4 rounded uppercase tracking-widest hover:bg-gray-200 transition">RSVP For Next Meet</button>
-            </div>
-        </section>
-
     </main>
-
-    <footer class="py-12 border-t border-white/5 text-center mt-12 opacity-50 text-[10px] font-bold uppercase tracking-[0.4em]">
-        ANTHONY ACADEMY &copy; 2026 | Safety First. Craft Always.
-    </footer>
-
 </body>
 </html>
