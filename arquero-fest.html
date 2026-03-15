@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arquero Fest | Welding Workshops & Events</title>
+  <meta name="description" content="Join Arquero Fest for welding workshops, live demos, and community events built for working welders and future tradespeople." />
+  <link rel="canonical" href="/arquero-fest.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand" aria-label="Arquero Co home"><span class="brand-mark"></span><span class="brand-text">Arquero <span>Co</span></span></a>
+    <nav class="nav-links" data-nav-links>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="arquero-fest.html">Arquero Fest</a>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions"><button class="menu-btn" data-menu-btn aria-label="Open menu">☰</button><button class="icon-btn" data-open-cart aria-label="Open cart">🛒 <span data-cart-count>0</span></button></div>
+  </div>
+</header>
+
+<main>
+  <section class="fest-hero section">
+    <div class="container">
+      <p class="kicker">Workshops + Community Events</p>
+      <h1 class="section-title">Arquero Fest</h1>
+      <p class="lead">Hands-on welding training, live fabrication demos, and community meetups. Learn from pros. Build with pride. Bring the crew.</p>
+      <a class="btn btn-primary" href="#register">Reserve your spot</a>
+    </div>
+  </section>
+
+  <section class="section container">
+    <p class="kicker">Welding workshops</p>
+    <h2 class="section-title">Training tracks for every level</h2>
+    <div class="grid fest-grid">
+      <article class="fest-card">
+        <h3>MIG Bootcamp</h3>
+        <p class="fest-meta">Beginner · 3 Hours · $149</p>
+        <p>Master machine setup, wire speed, and confident bead control on plate and pipe basics.</p>
+      </article>
+      <article class="fest-card">
+        <h3>TIG Precision Lab</h3>
+        <p class="fest-meta">Intermediate · 4 Hours · $225</p>
+        <p>Improve torch angle, puddle control, and heat management for cleaner stainless and aluminum passes.</p>
+      </article>
+      <article class="fest-card">
+        <h3>Field Repair Skills</h3>
+        <p class="fest-meta">Advanced · 2.5 Hours · $189</p>
+        <p>Rapid diagnosis, practical repair sequences, and safer workflows for on-site turnaround jobs.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section container">
+    <p class="kicker">Events calendar</p>
+    <h2 class="section-title">Upcoming Arquero Fest stops</h2>
+    <div class="timeline">
+      <div class="timeline-item"><h4>April 13 · Laredo, TX</h4><p>Live hood customization, vendor village, and evening sparks showcase.</p></div>
+      <div class="timeline-item"><h4>May 18 · San Antonio, TX</h4><p>Blue-collar networking breakfast + full-day workshop tracks and giveaways.</p></div>
+      <div class="timeline-item"><h4>June 22 · Houston, TX</h4><p>Weld-off challenge finals, creator panels, and product testing lane.</p></div>
+    </div>
+  </section>
+
+  <section class="section container" id="register">
+    <div class="newsletter">
+      <p class="kicker">Reserve your place</p>
+      <h2 class="section-title">Register for Arquero Fest</h2>
+      <form class="form-grid" data-contact-form>
+        <label>Full Name<input class="input" required type="text" placeholder="Your name" /></label>
+        <label>Email<input class="input" required type="email" placeholder="you@example.com" /></label>
+        <label>Choose Workshop
+          <select required>
+            <option value="">Select one</option>
+            <option>MIG Bootcamp</option>
+            <option>TIG Precision Lab</option>
+            <option>Field Repair Skills</option>
+          </select>
+        </label>
+        <label>Notes<textarea rows="4" placeholder="Anything we should know?"></textarea></label>
+        <button class="btn btn-primary" type="submit">Submit Registration</button>
+        <p data-contact-msg></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container footer-grid"><div><strong>Arquero Co</strong><p>Aim True. Weld True.</p></div><div><strong>Navigate</strong><p><a href="shop.html">Shop</a><br><a href="arquero-fest.html">Arquero Fest</a><br><a href="contact.html">Contact</a></p></div><div><strong>Events</strong><p>Workshops<br>Live demos<br>Community meetups</p></div></div></footer>
+
+<button class="btn btn-primary cart-float" data-open-cart>Cart (<span data-cart-count>0</span>)</button>
+<aside class="cart-drawer" data-cart-drawer><div class="cart-head"><strong>Your Cart</strong> <button class="icon-btn" data-close-cart>Close</button></div><div class="cart-items" data-cart-items></div><div class="cart-foot"><div class="cart-total"><span>Total</span><span data-cart-total>$0.00</span></div><button class="btn btn-primary" style="width:100%">Checkout</button></div></aside>
+<script src="script.js"></script>
+</body>
+</html>

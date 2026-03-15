@@ -1,67 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANTHONY | Stacking Dimes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    <script>
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-        function toggleTheme() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-    </script>
-    <style>
-        body { font-family: 'Inter', sans-serif; transition: background-color 0.3s; }
-        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
-        .btn-orange { background-color: #FF5F1F; color: black; font-weight: bold; transition: 0.3s; }
-        .btn-orange:hover { background-color: #e54e10; transform: translateY(-2px); }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arquero Co | Aim True. Weld True.</title>
+  <meta name="description" content="Arquero Co is a welding lifestyle brand rooted in Latino heritage and built for the shop floor. Shop heavyweight tees, hoodies, hats, and work-ready gear." />
+  <meta name="keywords" content="welding apparel, workwear, Arquero Co, San Miguel Heritage, welding gear" />
+  <link rel="canonical" href="/index.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-white text-zinc-900 dark:bg-[#121212] dark:text-[#eeeeee]">
-
-    <nav class="p-6 flex justify-between items-center border-b border-zinc-200 dark:border-white/10 sticky top-0 bg-white/90 dark:bg-[#121212]/90 backdrop-blur-md z-50">
-        <div class="text-2xl font-bold tracking-tighter">ANTHONY<span class="text-[#FF5F1F]">.</span></div>
-        <div class="hidden md:flex space-x-8 uppercase text-xs font-bold tracking-widest">
-            <a href="shop.html" class="hover:text-[#FF5F1F]">Shop Merch</a>
-            <a href="classes.html" class="hover:text-[#FF5F1F]">Book Classes</a>
-        </div>
-        <div class="flex items-center space-x-4">
-            <button onclick="toggleTheme()" class="p-2 rounded-full bg-zinc-100 dark:bg-white/5">
-                <span class="dark:hidden">🌙</span><span class="hidden dark:inline">☀️</span>
-            </button>
-            <a href="classes.html" class="btn-orange px-5 py-2 rounded text-xs uppercase tracking-widest">Book Now</a>
-        </div>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand" aria-label="Arquero Co home">
+      <span class="brand-mark"></span>
+      <span class="brand-text">Arquero <span>Co</span></span>
+    </a>
+    <nav class="nav-links" data-nav-links>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="arquero-fest.html">Arquero Fest</a>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html">Contact</a>
     </nav>
+    <div class="nav-actions">
+      <button class="menu-btn" data-menu-btn aria-label="Open menu">☰</button>
+      <button class="icon-btn" data-open-cart aria-label="Open cart">🛒 <span data-cart-count>0</span></button>
+    </div>
+  </div>
+</header>
 
-    <section class="relative h-[85vh] flex items-center justify-center text-center overflow-hidden">
-        <video id="heroVideo" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="http://googleusercontent.com/generated_video_content/11842524123238136500" type="video/mp4">
-        </video>
-        <div class="absolute inset-0 bg-black/50 dark:bg-black/60 z-10"></div>
-        <div class="relative z-20 px-4">
-            <h1 class="text-6xl md:text-9xl font-bold italic text-white drop-shadow-2xl mb-4">STACKING DIMES.</h1>
-            <p class="text-xl text-gray-200 uppercase tracking-widest mb-8">Premium Gear • Fabrication Workshops</p>
-            <div class="flex gap-4 justify-center">
-                <a href="shop.html" class="btn-orange px-10 py-4 rounded text-lg uppercase">Shop Gear</a>
-                <a href="classes.html" class="border border-white/50 text-white px-10 py-4 rounded text-lg uppercase hover:bg-white/10 transition">View Classes</a>
-            </div>
-        </div>
-    </section>
+<div class="strip"><div class="container"><span>Real products by real welders</span><span>From San Miguel to the Shop Floor</span><span>Tested in the field</span></div></div>
 
-    <script>
-        window.addEventListener('load', () => { document.getElementById('heroVideo').play(); });
-    </script>
+<section class="hero">
+  <div class="container">
+    <p class="kicker">Welding Lifestyle Brand</p>
+    <h1>Aim true.<br>Weld true.</h1>
+    <p class="rotator" data-rotator></p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="shop.html">Shop collections</a>
+      <a class="btn btn-outline" href="about.html">Our story</a>
+    </div>
+  </div>
+</section>
+
+  <section class="section container fest-banner">
+    <p class="kicker">Workshops + Events</p>
+    <h2 class="section-title">Train with us at Arquero Fest</h2>
+    <p class="lead">Join in-person welding workshops, live demos, and community meetups designed for real job-site growth.</p>
+    <a class="btn btn-primary" href="arquero-fest.html">Explore Arquero Fest</a>
+  </section>
+
+<main>
+  <section class="section container">
+    <p class="kicker">Featured products</p>
+    <h2 class="section-title">Shop the drop</h2>
+    <div class="grid products-grid" data-featured-grid></div>
+  </section>
+
+  <section class="section container">
+    <p class="kicker">Shop by collection</p>
+    <h2 class="section-title">Built by identity and grit</h2>
+    <div class="grid collection-grid">
+      <article class="collection-tile" style="background-image:url('https://images.unsplash.com/photo-1590845947670-c009801ffa74?auto=format&fit=crop&w=1200&q=80')">
+        <h3>San Miguel Heritage</h3>
+        <p>Identity pieces honoring roots, resilience, and craft.</p>
+        <a class="btn btn-primary" href="shop.html">Shop collection</a>
+      </article>
+      <article class="collection-tile" style="background-image:url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80')">
+        <h3>Work-Ready Gear</h3>
+        <p>FR-ready accessories and utility gear for long shifts.</p>
+        <a class="btn btn-primary" href="shop.html">Shop collection</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section container story-split">
+    <div class="story-image" role="img" aria-label="Welder at work with sparks"></div>
+    <div>
+      <p class="kicker">Brand story</p>
+      <h2 class="section-title">From San Miguel to the shop floor</h2>
+      <p class="lead">Arquero Co was forged between family heritage and blue-collar discipline. Every tee, hoodie, and cap is made to wear hard and represent with pride.</p>
+      <a class="btn btn-primary" href="about.html">Read our story</a>
+    </div>
+  </section>
+
+  <section class="section container">
+    <p class="kicker">Influencer / crew gallery</p>
+    <h2 class="section-title">Seen on the grind</h2>
+    <div class="grid insta-grid">
+      <div class="insta-card"><img loading="lazy" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80" alt="Crew member in welding gear"/></div>
+      <div class="insta-card"><img loading="lazy" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=600&q=80" alt="Welder with sparks"/></div>
+      <div class="insta-card"><img loading="lazy" src="https://images.unsplash.com/photo-1581093803931-46e730e7622c?auto=format&fit=crop&w=600&q=80" alt="Worksite crew"/></div>
+      <div class="insta-card"><img loading="lazy" src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" alt="Welder portrait"/></div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="newsletter">
+      <p class="kicker">Email capture</p>
+      <h2 class="section-title">Join the Arquero crew</h2>
+      <p class="lead">Get first access to limited drops, field-tested gear, and member-only pricing.</p>
+      <form class="newsletter-form" data-newsletter-form>
+        <input class="input" type="email" required placeholder="Your email" aria-label="Email address" />
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+        <p data-form-msg></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><strong>Arquero Co</strong><p>Aim True. Weld True.</p></div>
+    <div><strong>Navigate</strong><p><a href="shop.html">Shop</a><br><a href="arquero-fest.html">Arquero Fest</a><br><a href="about.html">About</a><br><a href="contact.html">Contact</a></p></div>
+    <div><strong>Collections</strong><p>Core Apparel<br>Work-Ready Gear<br>Identity Pieces</p></div>
+  </div>
+</footer>
+
+<button class="btn btn-primary cart-float" data-open-cart>Cart (<span data-cart-count>0</span>)</button>
+<aside class="cart-drawer" data-cart-drawer aria-label="Shopping cart drawer">
+  <div class="cart-head"><strong>Your Cart</strong> <button class="icon-btn" data-close-cart>Close</button></div>
+  <div class="cart-items" data-cart-items></div>
+  <div class="cart-foot"><div class="cart-total"><span>Total</span><span data-cart-total>$0.00</span></div><button class="btn btn-primary" style="width:100%">Checkout</button></div>
+</aside>
+
+<script src="script.js"></script>
 </body>
 </html>
